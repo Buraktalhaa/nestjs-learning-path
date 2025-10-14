@@ -5,8 +5,14 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  // iki tane get varsa sadece ilkini kullanır diğerini görmez.(eger hi path i yoksa)
   @Get()
   getHello(): string {
     return this.appService.getHello();
+  }
+
+  @Get('hi')
+  sayHi(): string {
+    return 'hi';
   }
 }
