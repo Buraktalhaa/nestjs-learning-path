@@ -1,4 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class UsersService {}
+export class UsersService {
+  getUserById(id: number) {
+    return { id, name: 'John Doe' };
+  }
+}
