@@ -13,6 +13,7 @@ export class AppController {
 
   @Get('hi')
   sayHi(): string {
-    return 'hi';
+    console.log('hi');
+    return this.appService.sayHi();
   }
 }
